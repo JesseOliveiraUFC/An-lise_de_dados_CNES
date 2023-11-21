@@ -17,5 +17,21 @@ A melhor forma de tratar esses arquivos que encontrei foi usando a linguagem R e
 install.packages("read.dbc")
 library(read.dbc)
 dados <- read.dbc("PFCE2310.dbc")
-write.csv(dados, "dados_profissionais.csv", row.names = FALSE)
+subset_dados = dados[c("CNES","CODUFMUN","CBO","NOMEPROF","CNS_PROF","COMPETEN")]
+write.csv(subset_dados, "dados_profissionais.csv", row.names = FALSE)
 ```
+
+O Código acima, realiza a instalação da biblioteca necessária para ler o arquivo .dbc e em seguida realiza a leitura dos dados para a variavel "dados".
+Como o arquivo possui muitas colunas desnecessárias para a nossa análise, só selecionamos as colunas que julgamos necessárias e, em seguida, salvamos os dados em um arquivo .csv para que pudesse ser lido mais facilmente por outras ferramentas.
+
+Dados sensíveis não serão divulgados, somente utilizados para validação do processo.
+
+Para dar prosseguimento à análise, precisamos de duas tabelas:
+
+1 - Relação dos municípios do Ceará e seus respectivos códigos do IBGE. Essa lista pode ser encontrada no site do IBGE: https://www.ibge.gov.br/explica/codigos-dos-municipios.php#CE
+
+2 - Relação das profissões e seus respectivos CBOs. Um PDF contendo todas as informações pode ser encontrado no site: http://www.mtecbo.gov.br/cbosite/pages/downloads.jsf
+
+Um vez concluída essa etapa, é hora de iniciar o processo de ETL para injetar esses dados em um banco PostgreSQL. Este processo será melhor descrito na seção a seguir:
+
+## Construção do Processo de ETL
