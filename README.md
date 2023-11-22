@@ -29,8 +29,7 @@ Dados sensíveis não serão divulgados, somente utilizados para validação do 
 
 Para dar prosseguimento à análise, precisamos de duas tabelas:
 
-1 - Relação dos municípios do Ceará e seus respectivos códigos do IBGE. Essa lista pode ser encontrada no site do IBGE: https://www.ibge.gov.br/explica/codigos-dos-municipios.php#CE
-
+1 - Relação dos municípios do Ceará e seus respectivos códigos do IBGE. Essa lista pode ser encontrada no site: https://www.conasems.org.br/wp-content/uploads/2020/04/combinepdf-2.pdf
 2 - Relação das profissões e seus respectivos CBOs. Um PDF contendo todas as informações pode ser encontrado no site: http://www.mtecbo.gov.br/cbosite/pages/downloads.jsf
 
 Um vez concluída essa etapa, é hora de iniciar o processo de ETL para injetar esses dados em um banco PostgreSQL. Este processo será melhor descrito na seção a seguir:
