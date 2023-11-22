@@ -3,6 +3,7 @@ Análise dos dados públicos do CNES sobre profissionais de saúde do estado do 
 
 Neste documento, pretendo detalhar todo o processo da análise dos dados de profissionais de Saúde, desde a coleta dos dados no DataSUS, até a construção do Painel (Dashboard) para visualização dos dados.
 
+
 ## Acesso aos dados no DataSUS e tratamento inicial do arquivo.
 
 A primeira etapa do processo consiste na coleta dos dados no site do governo, o DATASUS. Para isso, só foi necessário acessar o site do governo para solicitar o acesso à competência mais atual disponibilizada (no momento em que esse projeto foi iniciado, em 21/11/2023, a competência mais atual era a de outrubro/2023.
@@ -34,20 +35,40 @@ Para dar prosseguimento à análise, precisamos de duas tabelas:
 
 Um vez concluída essa etapa, é hora de iniciar o processo de ETL para injetar esses dados em um banco PostgreSQL. Este processo será melhor descrito na seção a seguir:
 
+
 ## Construção do Processo de ETL
 
 Para construir o processo de ETL usaremos o Pentaho Data Integration. O ETL consiste, basicamente, em coletar os dados trabalhados do arquivo .csv acima, injetar em um banco de dados PostgreSQL e, em seguida, criar um painel de visualização de dados com o Metabase através de consultas em SQL ao Banco de Dados.
 
-Para isso, necessitamos criar a tabela para receber os dados. A tabela será chamada dadosProfissionais e será criada no schema cnes utilizando o código a seguir:
+Para isso, necessitamos criar as tabelas para receber os dados. A primeira tabela será chamada dadosProfissionais a segunda será dadosMunicipios e elas serão criadas no schema cnes utilizando os códigos a seguir:
 
 ```
 CREATE TABLE cnes.dadosProfissionais (
     CNES VARCHAR(10),
-    CODUFMUN VARCHAR(6),
-    CBO VARCHAR(6),
+    CODUFMUN VARCHAR(10),
+    CBO VARCHAR(10),
     NOMEPROF VARCHAR(60),
-    CNS_PROF VARCHAR(10),
-    COMPETENCIA VARCHAR(6)
-    )
+    CNS_PROF VARCHAR(20),
+    COMPETENCIA VARCHAR(10)
+    );
+
+CREATE TABLE cnes.dadosMunicipios (
+    NOMEMUN VARCHAR(30),
+    CODUFMUN VARCHAR(10)
+    );
 ```
+
+A figura a seguir ilustra o simplles ETL feito usando o Pentaho:
+
+![image](https://github.com/JesseOliveiraUFC/Analise_de_dados_CNES/assets/97004339/3b12adfe-2057-4e28-be89-2c555303d784)
+
+Uma vez que o processo de ETL foi concluído, o Banco de Dados agora conta com a base atualizada:
+
+![image](https://github.com/JesseOliveiraUFC/Analise_de_dados_CNES/assets/97004339/e7cde2a1-da15-4ad6-b4b0-cfca214a0868)
+
+Próxima etapa será a construção do painel com o Metabase. Mais detalhes a seguir.
+
+
+## Construção do Painel.
+
 
