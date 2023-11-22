@@ -70,4 +70,10 @@ Próxima etapa será a construção do painel com o Metabase. Mais detalhes a se
 
 ## Construção do Painel.
 
+Para a construção do Painel eu utilizei o Matebase, por sua facilidade e por ser Open Source.
+
+Inicialmente, vou analisar dados de médicos, enfermeiros, odontólogos e agentes comunitários de saúde, pois essas são as categorias profissionais que compõem o time de Saúde da Família, proposto pelo MEC.
+A figura a seguir mostra os resultados totais dessas categorias por município.
+
+![image](https://github.com/JesseOliveiraUFC/Analise_de_dados_CNES/assets/97004339/7fe5a021-ede9-4a65-bed8-09197adb9dd3)
 
