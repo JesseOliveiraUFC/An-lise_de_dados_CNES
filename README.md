@@ -77,3 +77,16 @@ A figura a seguir mostra os resultados totais dessas categorias por município.
 
 ![image](https://github.com/JesseOliveiraUFC/Analise_de_dados_CNES/assets/97004339/7fe5a021-ede9-4a65-bed8-09197adb9dd3)
 
+A próxima etapa é realizar a análise dos índices profissionais (número de profissionais / número de habitantes) dos municípios e compara com as recomendações da OMS e do Ministério de Saúde.
+AS recomendações mínimas são:
+
+Médicos: 1.0 profissional por 1000 habitantes
+Enfermeiros: 5.0 profissionais por 1000 habitantes
+Odontólogos: 0.7 profissionais por 1000 habitantes
+ACS: 1.5 profissionais por 1000 habitantes
+
+As figuras a seguir mostram esses resultados:
+
+![image](https://github.com/JesseOliveiraUFC/Analise_de_dados_CNES/assets/97004339/ac881ac2-3bd3-4b0a-9d82-ae75edce04e1)
+![image](https://github.com/JesseOliveiraUFC/Analise_de_dados_CNES/assets/97004339/c31cc238-2e61-4a31-af63-b672443a4c20)
+
