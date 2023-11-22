@@ -35,3 +35,19 @@ Para dar prosseguimento à análise, precisamos de duas tabelas:
 Um vez concluída essa etapa, é hora de iniciar o processo de ETL para injetar esses dados em um banco PostgreSQL. Este processo será melhor descrito na seção a seguir:
 
 ## Construção do Processo de ETL
+
+Para construir o processo de ETL usaremos o Pentaho Data Integration. O ETL consiste, basicamente, em coletar os dados trabalhados do arquivo .csv acima, injetar em um banco de dados PostgreSQL e, em seguida, criar um painel de visualização de dados com o Metabase através de consultas em SQL ao Banco de Dados.
+
+Para isso, necessitamos criar a tabela para receber os dados. A tabela será chamada dadosProfissionais e será criada no schema cnes utilizando o código a seguir:
+
+```
+CREATE TABLE cnes.dadosProfissionais (
+    CNES VARCHAR(10),
+    CODUFMUN VARCHAR(6),
+    CBO VARCHAR(6),
+    NOMEPROF VARCHAR(60),
+    CNS_PROF VARCHAR(10),
+    COMPETENCIA VARCHAR(6)
+    )
+```
+
