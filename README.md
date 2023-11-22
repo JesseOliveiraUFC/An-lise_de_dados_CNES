@@ -64,7 +64,7 @@ A figura a seguir ilustra o simplles ETL feito usando o Pentaho:
 
 Uma vez que o processo de ETL foi concluído, o Banco de Dados agora conta com a base atualizada:
 
-![image](https://github.com/JesseOliveiraUFC/Analise_de_dados_CNES/assets/97004339/e7cde2a1-da15-4ad6-b4b0-cfca214a0868)
+![image](https://github.com/JesseOliveiraUFC/Analise_de_dados_CNES/assets/97004339/8cd64568-991e-47f0-a358-125693d383d9)
 
 Próxima etapa será a construção do painel com o Metabase. Mais detalhes a seguir.
 
